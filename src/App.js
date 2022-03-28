@@ -1,9 +1,23 @@
 import "./styles.css";
+// import { useState } from "react";
+import ComponentA from "./components/ComponentA";
 
-export default function App() {
+import Counter from "./components/Counter";
+import CounterContextProvider from "./context/CounterContext";
+
+const App = () => {
+  // const [name, setName] = useState("Lokesh Khati");
+
   return (
-    <div className="App">
-      <h1>Context API</h1>
-    </div>
+    <CounterContextProvider>
+      <div className="App">
+        {/* <h1>Context API</h1> */}
+
+        <Counter />
+        <ComponentA />
+      </div>
+    </CounterContextProvider>
   );
-}
+};
+
+export default App;
