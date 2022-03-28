@@ -1,7 +1,9 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useContext } from "react";
 
 // 1st step...createContext
-export const CounterContext = createContext();
+const CounterContext = createContext();
+
+export const useCounter = () => useContext(CounterContext);
 
 const CounterContextProvider = (props) => {
   const [counter, setCounter] = useState(0);

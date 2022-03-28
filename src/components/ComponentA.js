@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import ComponentB from "../components/ComponentB";
-import { CounterContext } from "../context/CounterContext";
+import { useCounter } from "../context/CounterContext";
 
 const ComponentA = ({ name }) => {
-  const { counter } = useContext(CounterContext);
+  const { counter } = useCounter();
   return (
     <div style={{ backgroundColor: "red" }}>
       <p>Count : {counter}</p>
